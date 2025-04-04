@@ -1,7 +1,6 @@
 "use client";
 
 import Head from "next/head";
-import * as Sentry from "@sentry/nextjs";
 
 export default function Page() {
   return (
@@ -35,7 +34,7 @@ export default function Page() {
           </svg>
         </h1>
 
-        <p>Get started by sending us a sample error:</p>
+        <p>Get started by triggering a test error:</p>
         <button
           type="button"
           style={{
@@ -49,30 +48,13 @@ export default function Page() {
             margin: "18px",
           }}
           onClick={() => {
-            Sentry.startSpan({
-              name: 'Example Frontend Span',
-              op: 'test'
-            }, async () => {
-              const res = await fetch("/api/sentry-example-api");
-              if (!res.ok) {
-                throw new Error("Sentry Example Frontend Error");
-              }
-            });
+            console.log("Error button clicked! (Sentry removed)");
           }}
         >
-          Throw error!
+          Simulate Error
         </button>
 
-        <p>
-          Next, look for the error on the{" "}
-          <a href="https://javascript-mastery.sentry.io/issues/?project=4507222371729408">Issues Page</a>.
-        </p>
-        <p style={{ marginTop: "24px" }}>
-          For more information, see{" "}
-          <a href="https://docs.sentry.io/platforms/javascript/guides/nextjs/">
-            https://docs.sentry.io/platforms/javascript/guides/nextjs/
-          </a>
-        </p>
+        <p>Next, check the console for logs.</p>
       </main>
     </div>
   );
