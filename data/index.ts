@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -75,7 +77,7 @@ export const projects = [
     title: "RecommendMeSomething",
     des: "That frustrating feeling when you want to watch something and are unable to decide which show to watch or the time when you can't seem to find the type of book you want to read? Reacom Ai is a Ai search tool that will help you find that perfect show or book.",
     img: "/rms.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/re.svg", "/tail.svg"],
     link: "https://recomai.netlify.app/",
   },
   {
@@ -83,7 +85,7 @@ export const projects = [
     title: "Apple iPhone Website Clone",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://appple-website.netlify.app/",
   },
   {
@@ -91,7 +93,7 @@ export const projects = [
     title: "HIRAV - Green Credit Management Platform",
     des: "Designed and developed a community-driven digital platform to support India's Green Credit Program (GCP),promoting eco-friendly initiatives like tree plantation, sustainable agriculture, and waste management.",
     img: "",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/tail.svg"],
     link: "",
   },
   {
@@ -205,13 +207,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/itsanshugoyal",
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "https://twitter.com/itsanshugoyal",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/itsanshugoyal/",
   },
 ];
